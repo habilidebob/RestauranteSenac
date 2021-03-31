@@ -53,8 +53,8 @@ namespace RestauranteSenac
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            string caminho = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
-            MessageBox.Show(caminho);
+            //string caminho = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
+            //MessageBox.Show(caminho);
         }
     }
 }

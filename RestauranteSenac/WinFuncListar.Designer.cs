@@ -55,6 +55,7 @@
             this.lblSetorEd = new System.Windows.Forms.Label();
             this.lblTelefoneEd = new System.Windows.Forms.Label();
             this.txbTelEd = new System.Windows.Forms.MaskedTextBox();
+            this.btnPDF = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFuncionarios)).BeginInit();
             this.gpxCadastro.SuspendLayout();
             this.gpxEditar.SuspendLayout();
@@ -77,12 +78,14 @@
             this.dgvFuncionarios.AllowUserToResizeColumns = false;
             this.dgvFuncionarios.AllowUserToResizeRows = false;
             this.dgvFuncionarios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvFuncionarios.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dgvFuncionarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvFuncionarios.Location = new System.Drawing.Point(22, 61);
             this.dgvFuncionarios.Name = "dgvFuncionarios";
             this.dgvFuncionarios.ReadOnly = true;
             this.dgvFuncionarios.Size = new System.Drawing.Size(718, 206);
             this.dgvFuncionarios.TabIndex = 1;
+            this.dgvFuncionarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFuncionarios_CellContentClick);
             this.dgvFuncionarios.SelectionChanged += new System.EventHandler(this.dgvFuncionarios_SelectionChanged);
             // 
             // gpxCadastro
@@ -322,11 +325,22 @@
             this.txbTelEd.Size = new System.Drawing.Size(233, 20);
             this.txbTelEd.TabIndex = 16;
             // 
+            // btnPDF
+            // 
+            this.btnPDF.Location = new System.Drawing.Point(638, 32);
+            this.btnPDF.Name = "btnPDF";
+            this.btnPDF.Size = new System.Drawing.Size(102, 23);
+            this.btnPDF.TabIndex = 4;
+            this.btnPDF.Text = "Exportar PDF";
+            this.btnPDF.UseVisualStyleBackColor = true;
+            this.btnPDF.Click += new System.EventHandler(this.btnPDF_Click);
+            // 
             // WinFuncListar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(772, 483);
+            this.Controls.Add(this.btnPDF);
             this.Controls.Add(this.gpxEditar);
             this.Controls.Add(this.gpxCadastro);
             this.Controls.Add(this.dgvFuncionarios);
@@ -373,5 +387,6 @@
         private System.Windows.Forms.Label lblSetorEd;
         private System.Windows.Forms.Label lblTelefoneEd;
         private System.Windows.Forms.MaskedTextBox txbTelEd;
+        private System.Windows.Forms.Button btnPDF;
     }
 }
