@@ -97,7 +97,7 @@ namespace RestauranteSenac
                 txbEmailEd.Text = linha.Field<string>("Email").ToString();
                 txbTelEd.Text = linha.Field<string>("Telefone").ToString();
                 txbFuncaoEd.Text = linha.Field<string>("Funcao").ToString();
-                txbSetorEd.Text = linha.Field<Int64>("Setor").ToString();
+                txbSetorEd.Text = linha.Field<Int32>("Setor").ToString();
                 // Atribuir true na podeEditar:
                 podeEditarApagar = true;
             }

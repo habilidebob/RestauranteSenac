@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Data.SQLite;
+using MySql.Data.MySqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,7 +25,7 @@ namespace RestauranteSenac.db
             // Qual comando SQL será executado:
             cmd.CommandText = "SELECT * FROM Funcionarios";
             // Executar e obter os dados da consulta em um obj SQLiteDA:
-            SQLiteDataAdapter da = new SQLiteDataAdapter(cmd.CommandText, objBanco.conexao);
+            MySqlDataAdapter da = new MySqlDataAdapter(cmd.CommandText, objBanco.conexao);
             // Preencher uma "tabela" com os dados retornados do BD:
             da.Fill(tabela);
             // Desconectar:
@@ -79,7 +79,7 @@ namespace RestauranteSenac.db
             // Definir qual comando DQL será executado:
             cmd.CommandText = "SELECT * FROM Funcionarios WHERE id = " + id;
             // Executar e "atribuir" o resultado em um objeto SQLiteDA
-            SQLiteDataAdapter da = new SQLiteDataAdapter(cmd.CommandText, banco.conexao);
+            MySqlDataAdapter da = new MySqlDataAdapter(cmd.CommandText, banco.conexao);
             // Definir qual "tabela" será preenchida com o resultado da consulta:
             da.Fill(tabela);
             // Desconectar:
